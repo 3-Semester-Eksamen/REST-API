@@ -2,5 +2,6 @@
 {
     public class ReadingsManager
     {
+        private readonly List<>
     }
 }
