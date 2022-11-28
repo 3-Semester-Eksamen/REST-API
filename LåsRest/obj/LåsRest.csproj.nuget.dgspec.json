@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\VS2022\\Projects\\LåsRest\\LåsRest\\LåsRest.csproj": {}
+    "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Eksamensprojekt\\REST-API\\LåsRest\\LåsRest.csproj": {}
   },
   "projects": {
-    "C:\\VS2022\\Projects\\LåsRest\\LåsRest\\LåsRest.csproj": {
+    "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Eksamensprojekt\\REST-API\\LåsRest\\LåsRest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VS2022\\Projects\\LåsRest\\LåsRest\\LåsRest.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Eksamensprojekt\\REST-API\\LåsRest\\LåsRest.csproj",
         "projectName": "LåsRest",
-        "projectPath": "C:\\VS2022\\Projects\\LåsRest\\LåsRest\\LåsRest.csproj",
-        "packagesPath": "C:\\Users\\frede\\.nuget\\packages\\",
-        "outputPath": "C:\\VS2022\\Projects\\LåsRest\\LåsRest\\obj\\",
+        "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Eksamensprojekt\\REST-API\\LåsRest\\LåsRest.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Eksamensprojekt\\REST-API\\LåsRest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\frede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -68,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
