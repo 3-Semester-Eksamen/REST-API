@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5sgmrZeIs0Oe7cfJUqMMhCVp+dNEFF6HI5VOa0ZJIL3L5xghlAWPXlxD9Ck5YTSw8nbrHdJTleXNNSoOqglFww==",
+  "dgSpecHash": "SySZSVlu/oKso8Z5WfD9joc7wwgHN5I6w7BRjc0od+6M0sWOS6c66sgR1AJHOGtvVBaKPEngmp2ZiTlsk+yGfw==",
   "success": true,
-  "projectFilePath": "C:\\VS2022\\Projects\\LåsRest\\LåsRest\\LåsRest.csproj",
+  "projectFilePath": "C:\\Users\\frede\\Source\\Repos\\3-Semester-Eksamen\\REST-API\\LåsRest\\LåsRest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\frede\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\frede\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
