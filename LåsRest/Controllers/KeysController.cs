@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Eksamen_ClassLibrary;
+using LåsRest.Managers;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,11 +10,16 @@ namespace LåsRest.Controllers
     [ApiController]
     public class KeysController : ControllerBase
     {
+
+        private static readonly KeysManager _manager = new();
+
         // GET: api/<KeysController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public ActionResult<List<Key>> Get()
         {
-            return new string[] { "value1", "value2" };
+            var keys = _manager.GetKeys();
+            return Ok(keys);
         }
 
         // GET api/<KeysController>/5
@@ -24,20 +31,55 @@ namespace LåsRest.Controllers
 
         // POST api/<KeysController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public ActionResult<Key> Post([FromBody] Key key)
         {
+            try
+            {
+                var createdKey = _manager.CreateKey(key);
+                return Created("/" + createdKey.Id ,createdKey);
+
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         // PUT api/<KeysController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<Key> Put(int id, [FromBody] Key value)
         {
+            try
+            {
+                Key updatedKey = _manager.UpdateUser(id, value);
+                return Ok(updatedKey);
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                return NotFound();
+            }
         }
 
         // DELETE api/<KeysController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<Key> Delete(int id)
         {
+            try
+            {
+                var deletedKeyUser = _manager.DeleteUser(id);
+                return Ok(deletedKeyUser);
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                return NotFound();
+            }
+            
         }
     }
 }
