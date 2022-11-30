@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Eksamen-ClassLibrary">
+      <HintPath>bin\Debug\net6.0\Eksamen-ClassLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
