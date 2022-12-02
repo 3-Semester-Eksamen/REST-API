@@ -70,7 +70,7 @@ namespace LåsRest.Managers
                 return deletedKey;
             }
            
-            throw new ArgumentOutOfRangeException();
+            throw new ArgumentOutOfRangeException("Provided ID does not exist");
             
 
         }
@@ -84,7 +84,7 @@ namespace LåsRest.Managers
                 return _data[id];
             }
             
-            throw new ArgumentOutOfRangeException();
+            throw new ArgumentOutOfRangeException("Provided ID does not exist");
            
 
         }

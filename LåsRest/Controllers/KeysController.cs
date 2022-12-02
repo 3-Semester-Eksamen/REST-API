@@ -60,7 +60,7 @@ namespace LåsRest.Controllers
             }
             catch (ArgumentOutOfRangeException e)
             {
-                return NotFound();
+                return NotFound(e.Message);
             }
         }
 
@@ -77,7 +77,7 @@ namespace LåsRest.Controllers
             }
             catch (ArgumentOutOfRangeException e)
             {
-                return NotFound();
+                return NotFound(e.Message);
             }
             
         }
