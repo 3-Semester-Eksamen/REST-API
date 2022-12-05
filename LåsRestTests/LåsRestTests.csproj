@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <Reference Include="Data Class Library">
-      <HintPath>..\LåsRest\bin\Debug\net6.0\Data Class Library.dll</HintPath>
+      <HintPath>..\Data Class Library.dll</HintPath>
     </Reference>
   </ItemGroup>
 
