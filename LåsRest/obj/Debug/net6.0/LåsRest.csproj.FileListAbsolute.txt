@@ -52,3 +52,4 @@ C:\Users\frede\source\repos\3-Semester-Eksamen\REST-API\LåsRest\obj\Debug\net6.
 C:\Users\frede\source\repos\3-Semester-Eksamen\REST-API\LåsRest\obj\Debug\net6.0\LåsRest.csproj.CopyComplete
 C:\Users\frede\source\repos\3-Semester-Eksamen\REST-API\LåsRest\obj\Debug\net6.0\LåsRest.genruntimeconfig.cache
 C:\Users\frede\source\repos\3-Semester-Eksamen\REST-API\LåsRest\obj\Debug\net6.0\ref\LåsRest.dll
+C:\Users\frede\Source\Repos\3-Semester-Eksamen\REST-API\LåsRest\bin\Debug\net6.0\Data Class Library.dll

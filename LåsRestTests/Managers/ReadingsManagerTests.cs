@@ -35,5 +35,27 @@ namespace LåsRest.Managers.Tests
             Assert.AreEqual(expectedType, actualType);
 
         }
+
+        [TestMethod()]
+        public void AddReadingTest()
+        {
+            //Arrange
+            var reading = new Reading()
+                {Id = 2, MacAddressSensor = "AA-00-04-00-XX-YY", OpenedBy = 1, Time = "2022-12-05 12:22:41"};
+            string notExpectedTime = reading.Time;
+            string actualTime;
+            int notExpectedId = reading.Id;
+            int actualId = 0;
+
+            //Act
+            var addedReading = _manager.AddReading(reading);
+            actualTime = addedReading.Time;
+            actualId = addedReading.Id;
+
+            //Assert
+            Assert.AreNotEqual(notExpectedId, actualId);
+            Assert.AreNotEqual(notExpectedTime, actualTime);
+
+        }
     }
 }

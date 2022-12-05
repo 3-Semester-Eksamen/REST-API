@@ -18,5 +18,22 @@ namespace LåsRest.Controllers
             var readings = _manager.GetReadings();
             return Ok(readings);
         }
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public ActionResult<IEnumerable<Reading>> GetReadings([FromBody] Reading reading)
+        {
+            try
+            {
+                Reading createdReading = _manager.AddReading(reading);
+                return Ok(createdReading);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
     }
 }
