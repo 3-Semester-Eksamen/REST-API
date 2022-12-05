@@ -9,7 +9,7 @@
       "LåsRest/1.0.0": {
         "dependencies": {
           "Swashbuckle.AspNetCore": "6.2.3",
-          "Eksamen-ClassLibrary": "1.0.0.0"
+          "Data Class Library": "1.0.0.0"
         },
         "runtime": {
           "LåsRest.dll": {}
@@ -62,9 +62,9 @@
           }
         }
       },
-      "Eksamen-ClassLibrary/1.0.0.0": {
+      "Data Class Library/1.0.0.0": {
         "runtime": {
-          "Eksamen-ClassLibrary.dll": {
+          "Data Class Library.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -120,7 +120,7 @@
       "path": "swashbuckle.aspnetcore.swaggerui/6.2.3",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
     },
-    "Eksamen-ClassLibrary/1.0.0.0": {
+    "Data Class Library/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

@@ -1,4 +1,4 @@
-﻿using Eksamen_ClassLibrary;
+﻿using Class_Library;
 using LåsRest.Managers;
 using Microsoft.AspNetCore.Mvc;
 
@@ -43,6 +43,7 @@ namespace LåsRest.Controllers
             }
             catch (ArgumentOutOfRangeException e)
             {
+                Console.WriteLine("penisPost");
                 return BadRequest(e.Message);
             }
         }
@@ -61,6 +62,11 @@ namespace LåsRest.Controllers
             catch (ArgumentOutOfRangeException e)
             {
                 return NotFound(e.Message);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("penis");
+                return NoContent();
             }
         }
 

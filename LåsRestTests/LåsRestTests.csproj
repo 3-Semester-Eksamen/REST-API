@@ -20,8 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Eksamen-ClassLibrary">
-      <HintPath>..\LåsRest\bin\Debug\net6.0\Eksamen-ClassLibrary.dll</HintPath>
+    <Reference Include="Data Class Library">
+      <HintPath>..\LåsRest\bin\Debug\net6.0\Data Class Library.dll</HintPath>
     </Reference>
   </ItemGroup>
 
