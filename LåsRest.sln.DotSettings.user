@@ -15,5 +15,8 @@
     &lt;TestId&gt;MSTest::0EB33700-1D1A-45F6-AEFC-0B89A3F110C8::net6.0::LåsRest.Managers.Tests.KeysManagersTests.CreateKeyTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::0EB33700-1D1A-45F6-AEFC-0B89A3F110C8::net6.0::LåsRest.Managers.Tests.KeysManagersTests.UpdateUserTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::0EB33700-1D1A-45F6-AEFC-0B89A3F110C8::net6.0::LåsRest.Managers.Tests.ReadingsManagerTests.AddReadingTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::0EB33700-1D1A-45F6-AEFC-0B89A3F110C8::net6.0::LåsRest.Managers.Tests.SensorsManagerTests.GetSensorsTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::0EB33700-1D1A-45F6-AEFC-0B89A3F110C8::net6.0::LåsRest.Managers.Tests.SensorsManagerTests.AddSensorSuccessTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::0EB33700-1D1A-45F6-AEFC-0B89A3F110C8::net6.0::LåsRest.Managers.Tests.SensorsManagerTests.AddSensorAlreadyExistsTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

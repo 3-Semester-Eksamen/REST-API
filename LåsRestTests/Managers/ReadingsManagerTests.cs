@@ -19,7 +19,7 @@ namespace LåsRest.Managers.Tests
         {
             //Arrange
             List<Reading> readings;
-            int expectedCount = 17;
+            int expectedCount = 1;
             int actualCount = 0;
             Type expectedType = typeof(List<Reading>);
             Type actualType;
