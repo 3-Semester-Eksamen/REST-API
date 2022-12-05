@@ -1,4 +1,4 @@
-﻿using Eksamen_ClassLibrary;
+﻿using Class_Library;
 
 namespace LåsRest.Managers
 {
