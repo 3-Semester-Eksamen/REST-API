@@ -14,9 +14,13 @@ namespace LåsRest.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<IEnumerable<Sensor>> GetSensors()
+        public ActionResult<IEnumerable<Sensor>> GetSensors([FromQuery] bool unassigned = false)
         {
-            return _manager.GetSensors();
+            List<Sensor> list;
+            if(unassigned) list = _manager.GetUnassignedSensors();
+            else list = _manager.GetSensors();
+
+            return Ok(list);
         }
 
         [HttpPost]
@@ -39,5 +43,27 @@ namespace LåsRest.Controllers
                 return BadRequest(e.Message);
             }
         }
+
+        [HttpPut()]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public ActionResult<Sensor> UpdateSensor([FromBody] Sensor updatesSensor)
+        {
+            try
+            {
+                var updatedSensor = _manager.UpdateSensorName(updatesSensor);
+                return Ok(updatedSensor);
+            }
+            catch (ArgumentNullException e)
+            {
+                return NotFound();
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
+        }
+
     }
 }

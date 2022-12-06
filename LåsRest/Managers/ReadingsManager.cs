@@ -27,6 +27,8 @@ namespace LåsRest.Managers
             new Reading() {Id = _nextId++, MacAddressSensor = "AA-00-04-00-XX-YY", OpenedBy = 3, Time = DateTime.Now.ToString()},
         };
 
+        private static readonly SensorsManager _sensorManager = new SensorsManager();
+
         public List<Reading> GetReadings()
         {
             var list = _data;
@@ -39,7 +41,12 @@ namespace LåsRest.Managers
             reading.Id = _nextId++;
             reading.Validate();
             _data.Add(reading);
+            if (!_sensorManager.SensorExists(reading.MacAddressSensor))
+                _sensorManager.AddSensor(new Sensor() {Name = "Unassigned", MacAddress = reading.MacAddressSensor});
+
             return reading;
         }
+
+        
     }
 }
