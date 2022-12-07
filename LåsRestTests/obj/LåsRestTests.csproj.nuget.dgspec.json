@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\Desktop\\3 semester eksamen\\REST-API\\LåsRestTests\\LåsRestTests.csproj": {}
+    "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRestTests\\LåsRestTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\Desktop\\3 semester eksamen\\REST-API\\LåsRestTests\\LåsRestTests.csproj": {
+    "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRestTests\\LåsRestTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Desktop\\3 semester eksamen\\REST-API\\LåsRestTests\\LåsRestTests.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRestTests\\LåsRestTests.csproj",
         "projectName": "LåsRestTests",
-        "projectPath": "C:\\Users\\andre\\Desktop\\3 semester eksamen\\REST-API\\LåsRestTests\\LåsRestTests.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Desktop\\3 semester eksamen\\REST-API\\LåsRestTests\\obj\\",
+        "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRestTests\\LåsRestTests.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRestTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\andre\\Desktop\\3 semester eksamen\\REST-API\\LåsRest\\LåsRest.csproj": {
-                "projectPath": "C:\\Users\\andre\\Desktop\\3 semester eksamen\\REST-API\\LåsRest\\LåsRest.csproj"
+              "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRest\\LåsRest.csproj": {
+                "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRest\\LåsRest.csproj"
               }
             }
           }
@@ -86,20 +86,20 @@
         }
       }
     },
-    "C:\\Users\\andre\\Desktop\\3 semester eksamen\\REST-API\\LåsRest\\LåsRest.csproj": {
+    "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRest\\LåsRest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Desktop\\3 semester eksamen\\REST-API\\LåsRest\\LåsRest.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRest\\LåsRest.csproj",
         "projectName": "LåsRest",
-        "projectPath": "C:\\Users\\andre\\Desktop\\3 semester eksamen\\REST-API\\LåsRest\\LåsRest.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Desktop\\3 semester eksamen\\REST-API\\LåsRest\\obj\\",
+        "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRest\\LåsRest.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -127,6 +127,20 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
