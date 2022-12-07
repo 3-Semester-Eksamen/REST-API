@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LåsRest", "LåsRest\LåsRest.csproj", "{173E280D-8266-461B-96C4-94EBC489BAED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LåsRestTests", "LåsRestTests\LåsRestTests.csproj", "{0EB33700-1D1A-45F6-AEFC-0B89A3F110C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LåsRestTests", "LåsRestTests\LåsRestTests.csproj", "{0EB33700-1D1A-45F6-AEFC-0B89A3F110C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

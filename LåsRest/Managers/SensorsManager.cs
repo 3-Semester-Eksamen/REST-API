@@ -14,6 +14,10 @@ namespace LåsRest.Managers
             new Sensor() {MacAddress = "FY-00-04-12-XX-YY", Name = "Andreas' mors værelse"},
             new Sensor() {MacAddress = "BY-09-05-10-XX-YY", Name = "Container"},
             new Sensor() {MacAddress = "AA-90-87-10-XX-YY", Name = "Dør2"},
+            new Sensor() {MacAddress = "AA-90-87-10-XX-YY", Name = "Unassigned"},
+            new Sensor() {MacAddress = "AA-99-84-10-XX-YY", Name = "Unassigned"},
+            new Sensor() {MacAddress = "AA-12-82-10-XX-YY", Name = "Unassigned"},
+            new Sensor() {MacAddress = "AA-21-67-10-XX-YY", Name = "Unassigned"},
         };
 
         public List<Sensor> GetSensors()
