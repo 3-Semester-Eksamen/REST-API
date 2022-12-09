@@ -12,30 +12,33 @@ namespace LåsRest.Managers
                 return await context.Set<T>().ToListAsync();
             }
         }
-        public async Task Add(T obj)
+        public async Task<T> Add(T obj)
         {
-            using(var context = new LåsDbContext())
+            using (var context = new LåsDbContext())
             {
-                context.Set<T>().Add(obj);
+                var entity = context.Set<T>().Add(obj).Entity;
                 await context.SaveChangesAsync();
+                return entity;
             }
         }
 
-        public async Task Update(T obj)
+        public async Task<T> Update(T obj)
         {
             using(var context = new LåsDbContext())
             {
-                context.Set<T>().Update(obj);
-                await context.SaveChangesAsync();
+               var entity = context.Set<T>().Update(obj).Entity;
+               await context.SaveChangesAsync();
+               return entity;
             }
         }
 
-        public async Task Delete(T obj)
+        public async Task<T> Delete(T obj)
         {
             using(var context = new LåsDbContext())
             {
-                context.Set<T>().Remove(obj);
+                var entity = context.Set<T>().Remove(obj).Entity;
                 await context.SaveChangesAsync();
+                return entity;
             }
         }
     }

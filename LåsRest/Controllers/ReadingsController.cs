@@ -9,7 +9,7 @@ namespace LåsRest.Controllers
     [ApiController]
     public class ReadingsController : ControllerBase
     {
-        private static ReadingsManager _manager = new();
+        private static IReadingsManager _manager = new ReadingsDbManager();
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]

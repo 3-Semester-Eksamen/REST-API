@@ -1,8 +1,10 @@
 ﻿using Class_Library;
+using LåsRest.CustomExceptions;
+using LåsRest.Managers.Interfaces;
 
 namespace LåsRest.Managers
 {
-    public class KeysManager
+    public class KeysManager : IKeysManager
     {
         private static bool _isInitialized = false;
         protected static int _nextId = 1;
@@ -38,15 +40,16 @@ namespace LåsRest.Managers
 
         public Key GetKeyById(int id)
         {
-            return _data[id];
+            var foundkey= _data[id];
+            if (foundkey == null) throw new BadSearch("No Key with that ID  was found");
+            return foundkey;
         }
 
         public Key CreateKey(Key newKey)
         {
-            newKey.Validate();
             if (!_data.ContainsKey(newKey.Id))
             {
-                newKey.Name = null;
+                newKey.Name = "Unassigned";
                 newKey.Phone = null;
                 newKey.Email = null;
                 _data.Add(newKey.Id, newKey);
@@ -64,7 +67,7 @@ namespace LåsRest.Managers
             if (_data.ContainsKey(id))
             {
                 Key deletedKey = _data[id];
-                deletedKey.Name = null;
+                deletedKey.Name = "Unassigned";
                 deletedKey.Email = null;
                 deletedKey.Phone = null;
                 return deletedKey;
@@ -81,6 +84,7 @@ namespace LåsRest.Managers
             if (_data.ContainsKey(id))
             {
                 _data[id] = updateKey;
+                updateKey.Validate();
                 return _data[id];
             }
             

@@ -10,14 +10,14 @@ namespace LåsRest.Controllers
     [ApiController]
     public class SensorsController : ControllerBase
     {
-        private static readonly SensorsManager _manager = new();
+        private static readonly ISensorsManager _manager = new SensorsDbManager();
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<IEnumerable<Sensor>> GetSensors([FromQuery] bool unassigned = false)
         {
             List<Sensor> list;
-            if(unassigned) list = _manager.GetUnassignedSensors();
+            if (unassigned) list = _manager.GetUnassignedSensors();
             else list = _manager.GetSensors();
 
             return Ok(list);
@@ -55,7 +55,7 @@ namespace LåsRest.Controllers
                 var updatedSensor = _manager.UpdateSensorName(updatesSensor);
                 return Ok(updatedSensor);
             }
-            catch (ArgumentNullException e)
+            catch (BadSearch e)
             {
                 return NotFound();
             }

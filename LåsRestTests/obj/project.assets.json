@@ -8800,23 +8800,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
+    "C:\\Users\\frede\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRestTests\\LåsRestTests.csproj",
+      "projectUniqueName": "C:\\Users\\frede\\Source\\Repos\\3-Semester-Eksamen\\REST-API\\LåsRestTests\\LåsRestTests.csproj",
       "projectName": "LåsRestTests",
-      "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRestTests\\LåsRestTests.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRestTests\\obj\\",
+      "projectPath": "C:\\Users\\frede\\Source\\Repos\\3-Semester-Eksamen\\REST-API\\LåsRestTests\\LåsRestTests.csproj",
+      "packagesPath": "C:\\Users\\frede\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\frede\\source\\repos\\3-Semester-Eksamen\\REST-API\\LåsRestTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\frede\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8825,15 +8825,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRest\\LåsRest.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Skrivebord\\Model\\REST-API\\LåsRest\\LåsRest.csproj"
+            "C:\\Users\\frede\\Source\\Repos\\3-Semester-Eksamen\\REST-API\\LåsRest\\LåsRest.csproj": {
+              "projectPath": "C:\\Users\\frede\\Source\\Repos\\3-Semester-Eksamen\\REST-API\\LåsRest\\LåsRest.csproj"
             }
           }
         }
@@ -8881,7 +8880,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -3,7 +3,7 @@ using LåsRest.CustomExceptions;
 
 namespace LåsRest.Managers
 {
-    public class SensorsManager
+    public class SensorsManager : ISensorsManager
     {
         private static int _nextId = 1;
 

@@ -1,5 +1,7 @@
 ﻿using Class_Library;
+using LåsRest.CustomExceptions;
 using LåsRest.Managers;
+using LåsRest.Managers.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -11,22 +13,34 @@ namespace LåsRest.Controllers
     public class KeysController : ControllerBase
     {
 
-        private static readonly KeysManager _manager = new();
+        private static readonly IKeysManager _manager = new KeysDbManager();
 
         // GET: api/<KeysController>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         public ActionResult<List<Key>> Get()
         {
             var keys = _manager.GetKeys();
+            if (keys.Count == 0) return NoContent();
             return Ok(keys);
         }
 
         // GET api/<KeysController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public ActionResult<Key> Get(int id)
         {
-            return "value";
+            try
+            {
+                var foundKey = _manager.GetKeyById(id);
+                return Ok(foundKey);
+            }
+            catch (BadSearch e)
+            {
+                return NotFound();
+            }
         }
 
         // POST api/<KeysController>
@@ -43,7 +57,6 @@ namespace LåsRest.Controllers
             }
             catch (ArgumentOutOfRangeException e)
             {
-                Console.WriteLine("penisPost");
                 return BadRequest(e.Message);
             }
         }
@@ -52,6 +65,7 @@ namespace LåsRest.Controllers
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult<Key> Put(int id, [FromBody] Key value)
         {
             try
@@ -59,15 +73,15 @@ namespace LåsRest.Controllers
                 Key updatedKey = _manager.UpdateUser(id, value);
                 return Ok(updatedKey);
             }
-            catch (ArgumentOutOfRangeException e)
+            catch (BadSearch e)
             {
                 return NotFound(e.Message);
             }
             catch (Exception e)
             {
-                Console.WriteLine("penis");
-                return NoContent();
+                return BadRequest(e.Message);
             }
+            
         }
 
         // DELETE api/<KeysController>/5
@@ -81,7 +95,7 @@ namespace LåsRest.Controllers
                 var deletedKeyUser = _manager.DeleteUser(id);
                 return Ok(deletedKeyUser);
             }
-            catch (ArgumentOutOfRangeException e)
+            catch (BadSearch e)
             {
                 return NotFound(e.Message);
             }

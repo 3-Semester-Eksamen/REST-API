@@ -2,7 +2,7 @@
 
 namespace LåsRest.Managers
 {
-    public class ReadingsManager
+    public class ReadingsManager : IReadingsManager
     {
         private static int _nextId = 1;
 

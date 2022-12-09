@@ -51,7 +51,7 @@ namespace LåsRest.Managers.Tests
             string actualName = "";
 
             // Act
-            var result = manager.CreateKey(newKey);
+            var result = manager.CreateKey(newKey).Result;
             actualId = result.Id;
             actualLength = manager.GetKeys().Count();
             actualName = result.Name;
