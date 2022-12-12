@@ -18,7 +18,7 @@ namespace LåsRest.Controllers
         {
             List<Sensor> list;
             if (unassigned) list = _manager.GetUnassignedSensors();
-            else list = _manager.GetSensors();
+            else list = _manager.GetAssignedSensors();
 
             return Ok(list);
         }

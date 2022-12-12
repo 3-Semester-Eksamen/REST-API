@@ -7,7 +7,7 @@ namespace LåsRest.Managers
     {
         private static readonly DbManager<Sensor> _dbManager = new DbManager<Sensor>();
 
-        public List<Sensor> GetSensors()
+        public List<Sensor> GetAssignedSensors()
         {
             var list = _dbManager.GetObjects().Result.FindAll(s => s.Name != "Unassigned");
             return list;
@@ -19,10 +19,15 @@ namespace LåsRest.Managers
             return list;
         }
 
+        public List<Sensor> GetAllSensors()
+        {
+            return _dbManager.GetObjects().Result;
+        }
+
         public Sensor AddSensor(Sensor sensor)
         {
             sensor.Validate();
-            var foundSensor = GetSensors().Find(s => s.MacAddress == sensor.MacAddress);
+            var foundSensor = GetAllSensors().Find(s => s.MacAddress == sensor.MacAddress);
             if (foundSensor != null) throw new AlreadyExists("A sensor with this MacAddress already exists");
             var createdSensor = _dbManager.Add(sensor).Result;
             return createdSensor;
@@ -30,7 +35,7 @@ namespace LåsRest.Managers
 
         public Sensor UpdateSensorName(Sensor updatesSensor)
         {
-            var sensor = GetSensors().Find(s => s.MacAddress == updatesSensor.MacAddress);
+            var sensor = GetAllSensors().Find(s => s.MacAddress == updatesSensor.MacAddress);
             if (sensor == null) throw new BadSearch("Sensor was not found");
             sensor.Name = updatesSensor.Name;
             sensor.Validate();
@@ -40,7 +45,7 @@ namespace LåsRest.Managers
 
         public bool SensorExists(string macAddress)
         {
-            return GetSensors().Exists(sensor => sensor.MacAddress == macAddress);
+            return GetAllSensors().Exists(sensor => sensor.MacAddress == macAddress);
 
         }
     }

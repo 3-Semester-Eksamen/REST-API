@@ -26,7 +26,7 @@ namespace LåsRest.Managers.Tests
             Type actualType;
 
             //Act
-            sensors = _manager.GetSensors();
+            sensors = _manager.GetAllSensors();
             actualCount = sensors.Count;
             actualType = sensors.GetType();
 
@@ -42,13 +42,13 @@ namespace LåsRest.Managers.Tests
             //Arrange
             Sensor sensorToBeAdded = new Sensor() {MacAddress = "AA-00-04-00-YY-XX", Name = "Ny Dør"};
             Sensor actualAddedSensor;
-            int initialCount = _manager.GetSensors().Count;
+            int initialCount = _manager.GetAllSensors().Count;
             int expectedCount = 6;
             int actualCount = 0;
 
             //Act
             actualAddedSensor = _manager.AddSensor(sensorToBeAdded);
-            actualCount = _manager.GetSensors().Count;
+            actualCount = _manager.GetAllSensors().Count;
 
             //Assert
             Assert.AreEqual(sensorToBeAdded.MacAddress, actualAddedSensor.MacAddress);
@@ -62,13 +62,13 @@ namespace LåsRest.Managers.Tests
         {
             //Arrange
             Sensor sensorToBeAdded = new Sensor() { MacAddress = "AA-00-04-00-XX-YY", Name = "Ny Dør" };
-            int initialCount = _manager.GetSensors().Count;
+            int initialCount = _manager.GetAllSensors().Count;
             int actualCount = 0;
 
             //Act
             //Assert
             Assert.ThrowsException<AlreadyExists>(() => _manager.AddSensor(sensorToBeAdded));
-            actualCount = _manager.GetSensors().Count;
+            actualCount = _manager.GetAllSensors().Count;
             Assert.AreEqual(initialCount, actualCount);
 
         }

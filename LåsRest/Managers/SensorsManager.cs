@@ -20,7 +20,7 @@ namespace LåsRest.Managers
             new Sensor() {MacAddress = "AA-21-67-10-XX-YY", Name = "Unassigned"},
         };
 
-        public List<Sensor> GetSensors()
+        public List<Sensor> GetAssignedSensors()
         {
             var list = _sensors.FindAll(s => s.Name != "Unassigned");
             return list;
@@ -30,6 +30,11 @@ namespace LåsRest.Managers
         {
             var list = _sensors.FindAll(s => s.Name == "Unassigned");
             return list;
+        }
+
+        public List<Sensor> GetAllSensors()
+        {
+            return _sensors;
         }
 
         public Sensor AddSensor(Sensor sensor)
