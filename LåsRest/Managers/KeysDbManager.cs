@@ -14,7 +14,7 @@ namespace LåsRest.Managers
         public KeysDbManager()
         {
             GetKeys();
-            //var createdKey = CreateKey(new Key() {Email = "Constructor", Name = "sasd", Phone = "1231"}).Result;
+            InitializeDatabase();
         }
 
         public List<Key> GetKeys()
@@ -68,6 +68,27 @@ namespace LåsRest.Managers
             foundKey.Validate();
             var updatedKey = _dbManager.Update(foundKey).Result;
             return updatedKey;
+        }
+
+        public void InitializeDatabase()
+        {
+            List<Key> keys = new List<Key>()
+            {
+                new Key() {Id = 0, Name = "Martin", Email = "martin@gmail.com", Phone = "88991041"},
+                new Key() {Id = 0, Name = "Frederik", Email = "frederik@gmail.com", Phone = "10203040"},
+                new Key() {Id = 0, Name = "Andreas", Email = "andreas@gmail.com", Phone = "68102769"},
+                new Key() {Id = 0, Name = "Victor", Email = "victor@gmail.com", Phone = "59275921"},
+                new Key() {Id = 0, Name = "Henrik", Email = "henrik@gmail.com", Phone = "98451234"},
+                new Key() {Id = 0, Name = "Mads", Email = "mads@gmail.com", Phone = "12375982"},
+                new Key() {Id = 0, Name = "Jacob", Email = "jacob@gmail.com", Phone = "23465412"},
+                new Key() {Id = 0, Name = "Jens", Email = "jens@gmail.com", Phone = "46583648"},
+                new Key() {Id = 0, Name = "Hans", Email = "hans@gmail.com", Phone = "87347645"},
+                new Key() {Id = 0, Name = "Karl", Email = "karl@gmail.com", Phone = "67564728"}
+            };
+            foreach (var k in keys)
+            {
+                var Key = _dbManager.Add(k).Result;
+            }
         }
     }
 }

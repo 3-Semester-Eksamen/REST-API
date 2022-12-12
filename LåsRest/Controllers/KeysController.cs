@@ -15,6 +15,8 @@ namespace LåsRest.Controllers
 
         private static readonly IKeysManager _manager = new KeysDbManager();
 
+
+
         // GET: api/<KeysController>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
