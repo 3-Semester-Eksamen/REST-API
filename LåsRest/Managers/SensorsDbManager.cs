@@ -9,7 +9,7 @@ namespace LåsRest.Managers
 
         public List<Sensor> GetSensors()
         {
-            var list = _dbManager.GetObjects().Result;
+            var list = _dbManager.GetObjects().Result.FindAll(s => s.Name != "Unassigned");
             return list;
         }
 
