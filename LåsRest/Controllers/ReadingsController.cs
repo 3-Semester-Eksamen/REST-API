@@ -24,6 +24,7 @@ namespace LåsRest.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public ActionResult<IEnumerable<Reading>> CreateReading([FromBody] Reading reading)
         {
+            Console.WriteLine(reading);
             try
             {
                 Reading createdReading = _manager.AddReading(reading);

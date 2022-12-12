@@ -37,6 +37,7 @@ namespace LåsRest.Managers
 
         public Reading AddReading(Reading reading)
         {
+            System.Diagnostics.Debug.WriteLine(reading);
             reading.Time = DateTime.Now.ToString();
             reading.Id = _nextId++;
             reading.Validate();
