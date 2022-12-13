@@ -8800,24 +8800,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\frede\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Victur\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\frede\\source\\repos\\3-Semester-Eksamen\\REST-API\\LåsRestTests\\LåsRestTests.csproj",
+      "projectUniqueName": "C:\\Users\\Victur\\Desktop\\REST-API\\LåsRestTests\\LåsRestTests.csproj",
       "projectName": "LåsRestTests",
-      "projectPath": "C:\\Users\\frede\\source\\repos\\3-Semester-Eksamen\\REST-API\\LåsRestTests\\LåsRestTests.csproj",
-      "packagesPath": "C:\\Users\\frede\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\frede\\Source\\Repos\\3-Semester-Eksamen\\REST-API\\LåsRestTests\\obj\\",
+      "projectPath": "C:\\Users\\Victur\\Desktop\\REST-API\\LåsRestTests\\LåsRestTests.csproj",
+      "packagesPath": "C:\\Users\\Victur\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Victur\\Desktop\\REST-API\\LåsRestTests\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\frede\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Victur\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8831,8 +8826,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\frede\\source\\repos\\3-Semester-Eksamen\\REST-API\\LåsRest\\LåsRest.csproj": {
-              "projectPath": "C:\\Users\\frede\\source\\repos\\3-Semester-Eksamen\\REST-API\\LåsRest\\LåsRest.csproj"
+            "C:\\Users\\Victur\\Desktop\\REST-API\\LåsRest\\LåsRest.csproj": {
+              "projectPath": "C:\\Users\\Victur\\Desktop\\REST-API\\LåsRest\\LåsRest.csproj"
             }
           }
         }
@@ -8880,7 +8875,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

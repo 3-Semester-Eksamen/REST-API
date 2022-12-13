@@ -13,7 +13,8 @@ namespace LåsRest.Controllers
     public class KeysController : ControllerBase
     {
 
-        private static readonly IKeysManager _manager = new KeysDbManager();
+        //private static readonly IKeysManager _manager = new KeysDbManager();
+        private static readonly IKeysManager _manager = new KeysManager();
 
 
 

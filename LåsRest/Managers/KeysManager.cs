@@ -12,16 +12,16 @@ namespace LåsRest.Managers
         private static Dictionary<int, Key> _data = new Dictionary<int, Key>();
         private static readonly List<Key> _list = new List<Key>()
         {
-            new Key() {Id = 1, Name = "Martin", Email = "martin@gmail.com", Phone = "88991041"},
-            new Key() {Id = 2, Name = "Frederik", Email = "frederik@gmail.com", Phone = "10203040"},
-            new Key() {Id = 3, Name = "Andreas", Email = "andreas@gmail.com", Phone = "68102769"},
-            new Key() {Id = 4, Name = "Victor", Email = "victor@gmail.com", Phone = "59275921"},
-            new Key() {Id = 5, Name = "Henrik", Email = "henrik@gmail.com", Phone = "98451234"},
-            new Key() {Id = 6, Name = "Mads", Email = "mads@gmail.com", Phone = "12375982"},
-            new Key() {Id = 7, Name = "Jacob", Email = "jacob@gmail.com", Phone = "23465412"},
-            new Key() {Id = 8, Name = "Jens", Email = "jens@gmail.com", Phone = "46583648"},
-            new Key() {Id = 9, Name = "Hans", Email = "hans@gmail.com", Phone = "87347645"},
-            new Key() {Id = 10, Name = "Karl", Email = "karl@gmail.com", Phone = "67564728"}
+            new Key() {Name = "Martin", Email = "martin@gmail.com", Phone = "88991041"},
+            new Key() {Name = "Frederik", Email = "frederik@gmail.com", Phone = "10203040"},
+            new Key() {Name = "Andreas", Email = "andreas@gmail.com", Phone = "68102769"},
+            new Key() {Name = "Victor", Email = "victor@gmail.com", Phone = "59275921"},
+            new Key() {Name = "Henrik", Email = "henrik@gmail.com", Phone = "98451234"},
+            new Key() {Name = "Mads", Email = "mads@gmail.com", Phone = "12375982"},
+            new Key() {Name = "Jacob", Email = "jacob@gmail.com", Phone = "23465412"},
+            new Key() {Name = "Jens", Email = "jens@gmail.com", Phone = "46583648"},
+            new Key() {Name = "Hans", Email = "hans@gmail.com", Phone = "87347645"},
+            new Key() {Name = "Karl", Email = "karl@gmail.com", Phone = "67564728"}
         };
 
         public KeysManager()
@@ -54,6 +54,7 @@ namespace LåsRest.Managers
         {
             if (!_data.ContainsKey(newKey.Id))
             {
+                newKey.Id = _nextId++;
                 newKey.Name = "Unassigned";
                 newKey.Phone = null;
                 newKey.Email = null;
@@ -61,7 +62,7 @@ namespace LåsRest.Managers
 
             }
 
-            return _data[newKey.Id];
+            return _data[_nextId++-1];
 
         }
 
