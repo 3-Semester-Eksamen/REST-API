@@ -1,3 +1,4 @@
 FileContentIndex/
 net6.0/
 .vs/
+Secrets.cs
