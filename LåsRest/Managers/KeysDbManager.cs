@@ -14,7 +14,7 @@ namespace LåsRest.Managers
         public KeysDbManager()
         {
             GetKeys();
-            InitializeDatabase();
+            //InitializeDatabase();
         }
 
         public List<Key> GetKeys()

@@ -7,7 +7,11 @@ namespace LåsRest.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LåsDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
+            //Use for Azure DB
+            options.UseSqlServer(Secrets.ConnectionString);
+
+            //Use for localDB
+            //options.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LåsDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
         }
 
         public DbSet<Key> Keys { get; set; }

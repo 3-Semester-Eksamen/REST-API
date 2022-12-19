@@ -11,7 +11,7 @@ namespace LåsRest.Controllers
     public class SensorsController : ControllerBase
     {
         //private static readonly ISensorsManager _manager = new SensorsDbManager();
-        private static readonly ISensorsManager _manager = new SensorsManager();
+        private static readonly ISensorsManager _manager = new SensorsDbManager();
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Victur\\Desktop\\REST-API\\LåsRest\\LåsRest.csproj": {}
+    "C:\\Users\\frede\\source\\repos\\3-Semester-Eksamen\\REST-API\\LåsRest\\LåsRest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Victur\\Desktop\\REST-API\\LåsRest\\LåsRest.csproj": {
+    "C:\\Users\\frede\\source\\repos\\3-Semester-Eksamen\\REST-API\\LåsRest\\LåsRest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Victur\\Desktop\\REST-API\\LåsRest\\LåsRest.csproj",
+        "projectUniqueName": "C:\\Users\\frede\\source\\repos\\3-Semester-Eksamen\\REST-API\\LåsRest\\LåsRest.csproj",
         "projectName": "LåsRest",
-        "projectPath": "C:\\Users\\Victur\\Desktop\\REST-API\\LåsRest\\LåsRest.csproj",
-        "packagesPath": "C:\\Users\\Victur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Victur\\Desktop\\REST-API\\LåsRest\\obj\\",
+        "projectPath": "C:\\Users\\frede\\source\\repos\\3-Semester-Eksamen\\REST-API\\LåsRest\\LåsRest.csproj",
+        "packagesPath": "C:\\Users\\frede\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\frede\\source\\repos\\3-Semester-Eksamen\\REST-API\\LåsRest\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Victur\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\frede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
