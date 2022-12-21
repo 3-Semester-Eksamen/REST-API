@@ -12,9 +12,9 @@ namespace LåsRest.Controllers
     [ApiController]
     public class KeysController : ControllerBase
     {
-        //Use with Azure Database
+        //Use with Database
         //private static readonly IKeysManager _manager = new KeysDbManager();
-        //Use with localDB
+        //Use with local data
         private static readonly IKeysManager _manager = new KeysManager();
 
 
