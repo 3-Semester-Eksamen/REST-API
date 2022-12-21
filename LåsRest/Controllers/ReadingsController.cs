@@ -9,8 +9,10 @@ namespace LåsRest.Controllers
     [ApiController]
     public class ReadingsController : ControllerBase
     {
+        //Use with Azure Database
         //private static IReadingsManager _manager = new ReadingsDbManager();
-        private static IReadingsManager _manager = new ReadingsDbManager();
+        //Use with localDB
+        private static IReadingsManager _manager = new ReadingsManager();
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]

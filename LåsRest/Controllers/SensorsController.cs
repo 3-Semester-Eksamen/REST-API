@@ -10,8 +10,10 @@ namespace LåsRest.Controllers
     [ApiController]
     public class SensorsController : ControllerBase
     {
+        //Use with Azure Database
         //private static readonly ISensorsManager _manager = new SensorsDbManager();
-        private static readonly ISensorsManager _manager = new SensorsDbManager();
+        //Use with localDB
+        private static readonly ISensorsManager _manager = new SensorsManager();
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
